@@ -13,6 +13,7 @@ Page({
   loadMovies(){
     wx.request({
       url:"https://douban.uieee.com/v2/movie/in_theaters",
+      method:"GET",
       header:{
         'Content-Type': 'json',
       },

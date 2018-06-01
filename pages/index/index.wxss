@@ -1,1 +1,69 @@
 /* pages/index/index.wxss */
+.move-content {
+  width: 100%;
+  height: 100%;
+}
+
+.movies-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 电影内容 两条一行显示 */
+.moveinfo {
+  flex-grow: 1;
+  width: 48%;
+  height: 100%;
+  margin:6rpx;
+  padding-top: 8rpx;
+}
+.moveinfo image {
+  width: 100%;
+  display: block;
+}
+.moveinfo .title{
+  margin: 10rpx;
+  font-size: 48rpx;
+  color: #878787;
+  text-align: center;
+}
+
+.moveinfo .year {
+  display: block;
+  font-size: 36rpx;
+  margin-bottom: 4rpx;
+  text-align: center;
+}
+
+.moveinfo .pingfen {
+  font-size: 32rpx;
+  text-align: center;
+}
+
+.moveinfo .pingfen text{
+  color: #f00;
+  font-weight: 700;
+}
+
+.moveinfo .yanyuan {
+  font-size: 30rpx;
+  text-align: center;
+  margin: 6rpx;
+}
+
+.moveinfo .ification {
+  font-size: 30rpx;
+  padding-left: 20rpx;
+  display: flex;
+  margin-top: 4rpx;
+}
+.moveinfo .ification text {
+  justify-content: flex-start;
+  padding: 10rpx;
+  background: #ccc;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 6rpx;
+}
