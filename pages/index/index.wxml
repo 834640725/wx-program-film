@@ -1,5 +1,5 @@
 <!--pages/index/index.wxml-->
-<scroll-view class='move-content' scroll-y="{{true}}">
+<scroll-view class='move-content' scroll-y="true" lower-threshold="10" bindscrolltolower="scrollHandler" >
     <view class='movies-content' wx:for="{{list}}" wx:key="{{index}}">
 
        <view class='moveinfo' wx:for="{{item}}" wx:key="{{index}}">
@@ -7,19 +7,19 @@
         <view class='title'>
           {{item.title}}
         </view>
-        <view class='year'>
-         {{item.pubdates[0]}}
+        <!-- <view class='year'>
+        上映时间:{{item.mainland_pubdate}}
+        </view> -->
+        <view class='pingfen'>豆瓣评分：
+         <text>{{item.rating.average ? item.rating.average : '暂无评分'}}</text> 
         </view>
-        <view class='pingfen'>齐洋评分 <text>{{item.rating.average}}</text></view>
         <view class='yanyuan'>
-          <text>演员：{{item.casts[0].name}} / {{item.casts[1].name}}</text>
-        </view> 
-
-        <view class='ification'>
-          <text>{{item.genres[0]}}</text><text>{{item.genres[1]}}</text>
+          <text>演员：{{item.casts[0].name}} {{item.casts[1].name ? ' / ' : '无'}} {{item.casts[1].name}}</text>
         </view>
        </view>
     </view>
 
-
+  <view class='loading' wx:if="{{loader}}"> 
+    <image src="../../assets/loading/loading-bars.svg"></image>
+  </view>
 </scroll-view>

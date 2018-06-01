@@ -1,13 +1,14 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/subject/subject",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/movieInfo/movieInfo"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "正在上映的电影",
+    "navigationBarTitleText": "最新电影",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false
@@ -15,10 +16,10 @@
   "tabBar": {
     "list": [
       {
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "/assets/image/index.png",
-      "selectedIconPath": "/assets/image/index-active.png"
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/assets/image/index.png",
+        "selectedIconPath": "/assets/image/index-active.png"
       },
       {
         "pagePath": "pages/subject/subject",
@@ -27,10 +28,10 @@
         "selectedIconPath": "/assets/image/subject-active.png"
       },
       {
-        "pagePath":"pages/user/user",
-        "text":"用户",
-        "iconPath":"/assets/image/user.png",
-        "selectedIconPath":"/assets/image/user-active.png"
+        "pagePath": "pages/user/user",
+        "text": "用户",
+        "iconPath": "/assets/image/user.png",
+        "selectedIconPath": "/assets/image/user-active.png"
       }
     ]
   }

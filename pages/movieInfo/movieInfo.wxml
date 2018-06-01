@@ -1,0 +1,4 @@
+<!--pages/movieInfo/movieInfo.wxml-->
+<view>
+  <text>电影详细信息</text>
+</view>
