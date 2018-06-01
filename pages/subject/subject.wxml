@@ -1,0 +1,4 @@
+<!--pages/subject/subject.wxml-->
+<view>
+  <text>Subject</text>
+</view>

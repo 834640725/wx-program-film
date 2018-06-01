@@ -1,0 +1,4 @@
+<!--pages/user/user.wxml-->
+<view>
+  <text>User</text>
+</view>
