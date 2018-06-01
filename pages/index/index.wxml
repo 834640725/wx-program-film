@@ -1,40 +1,22 @@
 <!--pages/index/index.wxml-->
 <scroll-view class='move-content' scroll-y="{{true}}">
-    <view class='movies-content'>
-    
-       <view class='moveinfo'>
-        <image src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2520331478.jpg"></image>
+    <view class='movies-content' wx:for="{{list}}" wx:key="{{index}}">
+
+       <view class='moveinfo' wx:for="{{item}}" wx:key="{{index}}">
+        <image src="{{item.images.large}}"></image>
         <view class='title'>
-          超时空同居 
+          {{item.title}}
         </view>
         <view class='year'>
-          2018-05-18(中国大陆)
+         {{item.pubdates[0]}}
         </view>
-        <view class='pingfen'>齐洋评分 <text>7.2</text></view>
+        <view class='pingfen'>齐洋评分 <text>{{item.rating.average}}</text></view>
         <view class='yanyuan'>
-          <text>演员：雷佳音 / 佟丽娅</text>
+          <text>演员：{{item.casts[0].name}} / {{item.casts[1].name}}</text>
         </view> 
 
         <view class='ification'>
-          <text>喜剧</text><text>爱情</text>
-        </view>
-       </view>
-
-      <view class='moveinfo'>
-        <image src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2520331478.jpg"></image>
-        <view class='title'>
-          超时空同居 
-        </view>
-        <view class='year'>
-          2018-05-18(中国大陆)
-        </view>
-        <view class='pingfen'>齐洋评分 <text>7.2</text></view>
-        <view class='yanyuan'>
-          <text>演员：雷佳音 / 佟丽娅</text>
-        </view> 
-
-        <view class='ification'>
-          <text>喜剧</text><text>爱情</text>
+          <text>{{item.genres[0]}}</text><text>{{item.genres[1]}}</text>
         </view>
        </view>
     </view>
