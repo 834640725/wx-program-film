@@ -45,10 +45,9 @@ Page({
 
   // 跳转专栏页
   totypeHander(e){
-    let ask = e.currentTarget.dataset.ask;
-    console.log(ask)
+    let {ask , title}= e.currentTarget.dataset;
     wx.navigateTo({
-      url: `/subject-movies-types/subject-movies-types?ask=${ask}`,
+      url: `/subject-movies-types/subject-movies-types?ask=${ask}&title=${title}`,
     })
   }
 })

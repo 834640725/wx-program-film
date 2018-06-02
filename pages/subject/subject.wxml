@@ -1,6 +1,6 @@
 <!--pages/subject/subject.wxml-->
 <view class='movie-type'>
-    <view wx:for="{{type}}" wx:key="{{index}}" data-ask="{{item.ask}}" bindtap='totypeHander'>
+    <view wx:for="{{type}}" wx:key="{{index}}" data-ask="{{item.ask}}" data-title="{{item.title}}" bindtap='totypeHander'>
      <image src='/assets/image/{{item.url}}' mode="widthFix" class='pic'></image>
      <text>{{item.title}}</text>
     </view>

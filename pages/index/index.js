@@ -10,6 +10,7 @@ Page({
      count:6,
      loader:false,
      types:'',
+     scrollTop:0,
   },
   onLoad(options){
     let types = options.ask ||'in_theaters';
@@ -62,5 +63,19 @@ Page({
     wx.navigateTo({
        url: '/pages/movieInfo/movieInfo?id=' + movesId,
     })
+  },
+
+  // 点击时滚动条滚动为0
+  onTabItemTap(){
+    this.setData({
+      scrollTop:0,
+    })  
+  },
+
+  // 下拉刷新
+  onPullDownRefresh:function(){
+    setTimeout(() => {
+      wx.stopPullDownRefresh()
+    },500)
   }
 })

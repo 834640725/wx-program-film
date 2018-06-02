@@ -15,10 +15,17 @@ Page({
   },
   onLoad(options) {
     let types = options.ask || 'in_theaters';
+    let title = options.title;
+
+    // 电影分类 setNavigationBarTitle设置
+    wx.setNavigationBarTitle({
+      title,
+    })
+    
     this.setData({
       types,
     })
-    console.log(this.data.types)
+    // console.log(this.data.types)
     this.loadMovies();
   },
   loadMovies() {
@@ -75,5 +82,12 @@ Page({
     wx.navigateTo({
       url: '/pages/movieInfo/movieInfo?id=' + movesId,
     })
-  }
+  },
+
+  // 下拉刷新
+  onPullDownRefresh: function () {
+    setTimeout(() => {
+      wx.stopPullDownRefresh()
+    }, 500)
+  } 
 })
