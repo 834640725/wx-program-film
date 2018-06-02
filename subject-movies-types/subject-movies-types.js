@@ -18,6 +18,7 @@ Page({
     this.setData({
       types,
     })
+    console.log(this.data.types)
     this.loadMovies();
   },
   loadMovies() {
@@ -30,11 +31,22 @@ Page({
       },
       success: ({ data }) => {
         let arr = [];
+
+        // 当进入的为 us_box(北美票行榜) weekly(口碑榜) 需要整理data的数据。
+        let subjects = [];
+        if (this.data.types === 'us_box' || this.data.types === 'weekly'){
+          data.subjects.forEach(el => {
+              subjects.push(el.subject)
+          })
+
+          data.subjects = subjects;
+        }
+
         for (let i = 0; i < data.subjects.length; i += 2) {
           //将没两个对象放进一个数组中
           // 上映日期格式转换
-          data.subjects[i].mainland_pubdate = data.subjects[i].mainland_pubdate.split('-').join('/');
-          data.subjects[i + 1].mainland_pubdate = data.subjects[i].mainland_pubdate.split('-').join('/');
+          // data.subjects[i].mainland_pubdate = data.subjects[i].mainland_pubdate.split('-').join('/');
+          // data.subjects[i + 1].mainland_pubdate = data.subjects[i].mainland_pubdate.split('-').join('/');
           arr.push([data.subjects[i], data.subjects[i + 1]])
 
         }
@@ -42,7 +54,6 @@ Page({
           list: arr,
           loader: false,
         })
-        console.log(this.data.list)
       }
     })
   },
