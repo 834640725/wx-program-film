@@ -3,7 +3,7 @@
     <view class='movies-content' wx:for="{{list}}" wx:key="{{index}}">
 
        <view class='moveinfo' wx:for="{{item}}" wx:key="{{index}}">
-        <image src="{{item.images.large}}"></image>
+        <image src="{{item.images.large}}" lazy-load='true' bindtap='gotoHander' data-moveid="{{item.id}}"></image>
         <view class='title'>
           {{item.title}}
         </view>

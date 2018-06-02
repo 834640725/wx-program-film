@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/yugao/yugao",
     "pages/index/index",
+    "pages/movieInfo/movieInfo",
     "pages/subject/subject",
-    "pages/user/user",
-    "pages/movieInfo/movieInfo"
+    "pages/user/user"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",

@@ -1,31 +1,34 @@
 <!--pages/movieInfo/movieInfo.wxml-->
-<view class='moviesInfo'>
+<view class='moviesInfo' style="background-image: url('{{moviesData.images.large}}');background-repeat: no-repeat;">
   <view class='zhezhao'></view>
   <view class='message'>
      <view class='haibao'>
-      <image src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2523364763.jpg"></image>
+      <image src="{{moviesData.images.large}}"></image>
      </view>
 
       <view class='text'>
-        <view class='movename'>哆啦A梦，大熊的金银岛</view>
-        <view class='waiguoName'>外国电影名字</view>
+        <view class='movename'>{{moviesData.title
+}}</view>
+        <view class='waiguoName'>{{moviesData.original_title}}</view>
         <view class='pingfen'>
-           <text class='fen'>7.3</text>
-           <text class='peoper'>3211人评价</text>
+           <text class='fen'>{{moviesData.rating.average}}</text>
+           <text class='peoper'>{{moviesData.ratings_count}}人评分</text>
         </view>
+
+         <view class='yugao' bindtap='yugaoHander' data-Id="{{moviesData.id}}">预告片</view>
       </view>
   </view>
 </view>
 
 <view class='xiangxijieshao'>
-    <view>109分钟 动画 / 奇幻 /冒险</view>
-    <view>109分钟 动画 / 奇幻 /冒险</view>
-    <view>109分钟 动画 / 奇幻 /冒险</view>
+    <view>{{moviesData.durations[0]}} 
+    <text wx:for="{{moviesData.genres}}" wx:key="{{index}}">{{item}} <text wx:if="{{index !== moviesData.genres.length - 1}}"> / </text> </text>
+    </view>
+    <view>{{moviesData.pubdates[moviesData.pubdates.length - 1]}}上映 {{moviesData.countries[0]}}</view>
+    <view>{{moviesData.directors[0].name}}(导演) {{moviesData.casts[0].name}} / {{moviesData.casts[1].name}}</view>
 </view>
 
 <view class='juqing'>
-  <view class='juqingjianjie'>哆啦A梦，大熊的金银岛剧情简介</view>
-  <view class='xinxi'>
-  这一次，嘴里没把门的大雄（大原惠美 配音）又在胖虎（木村昴 配音）和小夫（关智一 配音）面前立下豪言壮语，“我一定要发现金银岛！”当然，一如既往地，哆啦A梦（水田山葵 配音）及时补位，拿出了秘密道具“金银岛地图”来，开始了前途未卜的寻宝之旅。谁曾想，寻宝地图居然在太平洋中心发现了一座新的岛屿。于是，大雄、哆啦A梦、胖虎、小夫以及静香（嘉数由美 配音）等伙伴们乘坐着巨船朝着目的地出发。最初的航海之旅当然充满惊险、快乐和刺激，但是危险也不期而至。在大海的某处，他们意外遭遇希尔弗船长（大泉洋 配音）率领的海盗团。少年们仓促迎战，虽然暂时击退了海盗，然而静香却在混乱中被对方掳走。在此之后，大雄等人救下了在海中漂泊的是少年弗洛克（山下大辉 配音），弗洛克和希尔弗船长有着不同寻常的关系。以此为契机，大雄等人也知晓了关于那座神秘宝岛的秘密。他们最终能否救出静香？又能否知道这一系列变故背后的玄机？
-  </view>
+  <view class='juqingjianjie'>{{moviesData.title}} 剧情简介</view>
+  <view class='xinxi'>{{moviesData.summary}}</view>
 </view>

@@ -3,9 +3,8 @@
   width: 100%;
   height: 358rpx;
   position: relative;
-  background: url('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2523364763.jpg') no-repeat;
-  background-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
+  background-size: 100%;
 }
 
 .zhezhao {
@@ -85,4 +84,22 @@
   padding:32rpx 0;
   font-size: 28rpx;
   line-height: 36rpx;
+}
+
+.pianhua {
+  text-align: center;
+  font-size: 22rpx;
+  color: #757575;
+}
+
+.yugao {
+  display: block;
+  padding: 10rpx;
+  background: #f60;
+  border-radius: 6rpx;
+  font-size: 28rpx;
+  width: 140rpx;
+  text-align: center;
+  line-height: 28rpx;
+  margin-top: 8rpx;
 }

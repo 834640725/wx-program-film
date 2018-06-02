@@ -48,5 +48,14 @@ Page({
     })
     console.log(this.data.count)
      this.loadMovies(); 
+  },
+
+  // 跳转页
+  gotoHander(e){
+    let movesId = e.currentTarget.dataset.moveid;
+    //跳转电影详情页
+    wx.navigateTo({
+       url: '/pages/movieInfo/movieInfo?id=' + movesId,
+    })
   }
 })
