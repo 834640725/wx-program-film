@@ -1,0 +1,3 @@
+/* subject-movies-types/subject-movies-types.wxss */
+
+@import '/component/style/movies-type.wxss';

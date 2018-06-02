@@ -1,7 +1,6 @@
-<!--pages/index/index.wxml-->
 
-
-<!-- <scroll-view class='move-content' scroll-y="true" lower-threshold="10" bindscrolltolower="scrollHandler" >
+<template name="movies-type">
+<scroll-view class='move-content' scroll-y="true" lower-threshold="10" bindscrolltolower="scrollHandler" >
 
     <view class='movies-content' wx:for="{{list}}" wx:key="{{index}}">
 
@@ -9,12 +8,11 @@
         <image src="{{item.images.large}}" lazy-load='true' bindtap='gotoHander' data-moveid="{{item.id}}"></image>
         <view class='title'>
           {{item.title}}
-        </view> -->
-
+        </view>
         <!-- <view class='year'>
         上映时间:{{item.mainland_pubdate}}
         </view> -->
-        <!-- <view class='pingfen'>豆瓣评分：
+        <view class='pingfen'>豆瓣评分：
          <text>{{item.rating.average ? item.rating.average : '暂无评分'}}</text> 
         </view>
         <view class='yanyuan'>
@@ -26,10 +24,5 @@
   <view class='loading' wx:if="{{loader}}"> 
     <image src="/assets/loading/loading-bars.svg"></image>
   </view>
-</scroll-view> -->
-
-<!-- 引入电影列表组件 -->
-<import src="/component/moves-type/moves-type.wxml"/>
-
-<!-- 当前组件的数据 list loader传入子组件 -->
-<template is="movies-type" data="{{list, loader}}"></template>
+</scroll-view>
+</template>

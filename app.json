@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/yugao/yugao",
     "pages/movieInfo/movieInfo",
-    "pages/user/user"
+    "pages/user/user",
+    "subject-movies-types/subject-movies-types"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",

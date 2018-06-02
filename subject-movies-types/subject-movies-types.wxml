@@ -1,0 +1,6 @@
+<!--subject-movies-types/subject-movies-types.wxml-->
+
+<!-- 从subject电影分类中进步公用组件 -->
+<import src="/component/moves-type/moves-type.wxml"/>
+
+<template data="{{list,loader}}" is="movies-type"></template>
