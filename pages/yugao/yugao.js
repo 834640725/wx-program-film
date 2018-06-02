@@ -5,14 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+     movieData:{},
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let id = options.id;
+    wx.request({
+      url: 'https://douban.uieee.com/v2/movie/subject/' + id,
+      method:"GET",
+      header:{
+        'Content-Type': 'json',
+      },
+      success:(({data}) => {
+        this.setData({
+          movieData:data,
+        })
+        console.log(this.data.movieData)
+      })
+    })
   },
 
   /**

@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/yugao/yugao",
     "pages/index/index",
+    "pages/yugao/yugao",
     "pages/movieInfo/movieInfo",
     "pages/subject/subject",
     "pages/user/user"

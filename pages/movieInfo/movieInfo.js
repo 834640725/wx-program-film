@@ -30,6 +30,10 @@ Page({
   },
 
   yugaoHander(e){
-    
+      let Id = e.currentTarget.dataset.id;
+
+      wx.navigateTo({
+        url: '/pages/yugao/yugao?id=' + Id,
+      })
   }
 })

@@ -1,2 +1,5 @@
 <!--pages/yugao/yugao.wxml-->
-<view>预告片</view>
+<view class='box'>
+<video src='{{movieData.clip_urls[0]}}' class='videos' controls="true" autoplay="true" show-fullscreen-btn="true">
+</video>
+</view>
