@@ -1,1 +1,88 @@
 /* pages/movieInfo/movieInfo.wxss */
+.moviesInfo {
+  width: 100%;
+  height: 358rpx;
+  position: relative;
+  background: url('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2523364763.jpg') no-repeat;
+  background-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.zhezhao {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5)
+}
+
+.message{
+  position: absolute;
+  left: 0rpx;
+  bottom: 0rpx;
+  width: 100%;
+}
+
+.message .haibao {
+  width: 200rpx;
+  height: 280rpx;
+  display: inline-block;
+  margin: 0 28rpx;
+  position: relative;
+  top: 46rpx;
+}
+
+.message image {
+  width: 100%;
+  height: 100%;
+}
+
+.message .text {
+   display: inline-block;
+   color: #fff;
+   position: relative;
+   width: 444rpx;
+}
+.message .movename, .message .waiguoName{
+  /* 溢出隐藏的文字容器宽高一定要固定，高度等于文字的大小 */
+   width: 444rpx;
+   font-size: 40rpx;
+   line-height: 40rpx;
+   height: 40rpx;
+   margin-bottom: 16rpx;
+   overflow: hidden;
+   text-overflow:ellipsis;
+   white-space: nowrap;
+}
+
+.pingfen .fen {
+  font-size: 52rpx;
+  margin: 38rpx 18rpx 12rpx 2rpx;
+}
+
+.pingfen .peoper {
+  color: #ccc;
+  font-size: 32rpx;
+}
+
+.xiangxijieshao {
+  margin-top: 86rpx;
+  padding: 0 32rpx;
+  font-size: 26rpx;
+  margin-bottom: 40rpx;
+}
+.xiangxijieshao view {
+  line-height: 36rpx;
+} 
+
+.juqing {
+  padding: 0 32rpx;
+}
+.juqing .juqingjianjie {
+  font-size: 28rpx;
+  color: #b3b3b3;
+}
+
+.juqing .xinxi {
+  padding:32rpx 0;
+  font-size: 28rpx;
+  line-height: 36rpx;
+}
