@@ -1,7 +1,5 @@
-
 <template name="movies-type">
-<view>
-  <scroll-view class='move-content' scroll-y="true" lower-threshold="10" bindscrolltolower="scrollHandler" enable-back-to-top="true" scroll-top="{{scrollTop}}" scroll-with-animation="true">
+  <scroll-view class='move-content' scroll-y="true" lower-threshold="10" bindscrolltolower="scrollHandler" enable-back-to-top="true" scroll-top="{{scrollTop}}" scroll-with-animation="true" bindscroll="bindHander">
 
       <view class='movies-content' wx:for="{{list}}" wx:key="{{index}}">
 
@@ -26,5 +24,4 @@
       <image src="/assets/loading/loading-bars.svg"></image>
     </view>
   </scroll-view>
-</view>
 </template>

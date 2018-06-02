@@ -84,10 +84,5 @@ Page({
     })
   },
 
-  // 下拉刷新
-  onPullDownRefresh: function () {
-    setTimeout(() => {
-      wx.stopPullDownRefresh()
-    }, 500)
-  } 
+ 
 })

@@ -11,6 +11,8 @@ Page({
      loader:false,
      types:'',
      scrollTop:0,
+     initTop:0, //初始的滚动条高度
+     state:1,
   },
   onLoad(options){
     let types = options.ask ||'in_theaters';
@@ -53,7 +55,7 @@ Page({
       count:this.data.count += 4,
     })
     console.log(this.data.count)
-     this.loadMovies(); 
+     this.loadMovies();
   },
 
   // 跳转页
@@ -65,17 +67,34 @@ Page({
     })
   },
 
-  // 点击时滚动条滚动为0
-  onTabItemTap(){
-    this.setData({
-      scrollTop:0,
-    })  
+  // 点击两次时滚动条滚动为0
+  onTabItemTap(item){
+      this.setData({
+        state:this.data.state+1
+      })
+      if (this.data.state >= 2){
+          this.setData({
+            scrollTop:0
+          })
+      }
   },
 
-  // 下拉刷新
-  onPullDownRefresh:function(){
-    setTimeout(() => {
-      wx.stopPullDownRefresh()
-    },500)
-  }
+  //实时获取滚动的距离
+  bindHander(event){
+    // 节流
+    clearTimeout(this.timer)
+    this.timer = setTimeout(() => {
+      let scrolltop = event.detail.scrollTop;
+      this.setData({
+        scrollTop:scrolltop,
+        initTop:scrolltop,
+      })
+    },1000)
+  },
+
+  onHide(){
+    this.setData({
+      state:0
+    })
+  }  
 })

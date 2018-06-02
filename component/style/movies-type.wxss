@@ -5,6 +5,7 @@
   overflow: hidden;
 }
 
+
 .movies-content {
   width: 100%;
   display: flex;

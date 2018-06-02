@@ -4,4 +4,5 @@
 <import src="/component/moves-type/moves-type.wxml"/>
 
 <!-- 当前组件的数据 list loader传入子组件 -->
+
 <template is="movies-type" data="{{list, loader, scrollTop}}"></template>
