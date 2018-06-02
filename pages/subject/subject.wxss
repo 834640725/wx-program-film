@@ -1,1 +1,28 @@
 /* pages/subject/subject.wxss */
+.movie-type {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.movie-type view {
+  position: relative;
+  height: 140rpx;
+  width: 100%;
+  overflow: hidden;
+}
+
+.movie-type view text {
+  position: absolute;
+  left: 16rpx;
+  bottom: 10rpx;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.movie-type .pic{
+  width: 100%;
+  display: block;
+  height:125rpx;
+}
