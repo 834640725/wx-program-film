@@ -16,7 +16,7 @@
 
       <!-- 未登录状态 -->
       <view  wx:if="{{!isShouquan}}">
-      <image src="/assets/image/header.png"></image>
+      <image src="/assets/image/header.png" class='noTitle'></image>
 
       <button open-type="getUserInfo" type='primary' bindgetuserinfo="userHander" class='userLogin'>登 陆</button>
       </view>

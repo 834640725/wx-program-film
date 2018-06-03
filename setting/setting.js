@@ -6,6 +6,9 @@ Page({
    */
   data: {
     isLogin:false,
+    title:"是否退出登陆",
+    tip:"退出后会停留在此页",
+    state:false,
   },
 
   /**
@@ -28,11 +31,31 @@ Page({
    * 只有当前为登陆状态时才可退出
    */
   dropOut(){
-    if(this.data.isLogin){
-       wx.setStorage({
-         key: 'login',
-         data: false,
-       })
+    if (this.data.isLogin){
+        this.setData({
+          state: true,
+        })
     }
-  }
+  },
+
+  // 取消退出
+  bindHander(){
+    this.setData({
+      state:false,
+    })
+  },
+
+  //确认退出
+  confirm(){
+    console.log(1)
+    wx.setStorage({
+      key: 'login',
+      data: false,
+    })
+
+    this.setData({
+      state: false,
+      isLogin:false,
+    })
+  } 
 })

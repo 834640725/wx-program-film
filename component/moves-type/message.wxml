@@ -1,0 +1,18 @@
+
+<!-- // 弹窗 二次确认 -->
+
+<!-- bindHander 取消 -->
+<!-- confirm 确认 -->
+
+<template name="message" data="{{title,tip, state}}">
+  <view class='queren' wx:if="{{state}}">
+    <view class='message'>
+        <view class='title'>{{title}}</view>
+        <view class='tips'>{{tip}}</view>
+        <view class='iscancel'>
+          <view class='cancel' bindtap='bindHander'>取消</view>
+          <view class='yes' bindtap='confirm'>确认</view>
+        </view>
+    </view>
+  </view>
+</template>

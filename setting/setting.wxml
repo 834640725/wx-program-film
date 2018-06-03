@@ -1,4 +1,7 @@
 <!--setting/setting.wxml-->
+
+<import src="/component/moves-type/message.wxml"/>
+
 <view class='cont'>
   <view class='setting'>
     <text>用户反馈</text>
@@ -10,13 +13,6 @@
   </view>
 </view>
 
-<view class='queren' wx:if="{{false}}">
-  <view class='message'>
-      <view class='title'>是否退出登陆</view>
-      <view class='tips'>退出后直接返回用户界面</view>
-      <view class='iscancel'>
-        <view class='cancel'>取消</view>
-        <view class='yes'>确认</view>
-      </view>
-  </view>
-</view>
+<template is="message" data="{{title, tip, state}}"></template>
+
+
