@@ -83,3 +83,17 @@
   font-size: 28rpx;
   margin-top: 40rpx;
 }
+
+.userLogin {
+  width: 300rpx;
+  height: 90rpx;
+  border-radius: 150rpx;
+  text-align: center;
+  line-height: 90rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 26rpx;
+}
+
+.aqititle {
+  margin-bottom: 20rpx;
+}

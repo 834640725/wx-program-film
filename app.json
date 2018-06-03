@@ -6,7 +6,8 @@
     "pages/yugao/yugao",
     "pages/movieInfo/movieInfo",
     "subject-movies-types/subject-movies-types",
-    "record/record"
+    "record/record",
+    "collection/collection"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",

@@ -1,0 +1,8 @@
+/* collection/collection.wxss */
+
+.tip {
+  font-size: 30rex;
+  color: #ccc;
+  text-align: center;
+  padding-top: 40rpx;
+}

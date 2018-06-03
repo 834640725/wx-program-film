@@ -1,13 +1,26 @@
 <!--pages/user/user.wxml-->
 <view class='userinfo'>
-     <view class='headpic'>
-      <image src="{{userData.avatarUrl}}"></image>
+       <view class='headpic'>
 
-      <view class='username'>
-        <text>{{userData.nickName}}</text>
-        <text class='vip'>Vip10</text>
-        <image src='/assets/image/vip.png'></image>
+        <!-- 登陆状态 -->
+        <view wx:if="{{isShouquan}}">
+            <image src="{{userData.avatarUrl}}"></image> 
+
+          <view class='username'>
+            <text>{{userData.nickName}}</text>
+            <text class='vip'>Vip10</text>
+            <image src='/assets/image/vip.png'></image>
+          </view>  
+        </view>  
+
+
+      <!-- 未登录状态 -->
+      <view  wx:if="{{!isShouquan}}">
+      <image src="/assets/image/header.png"></image>
+
+      <button open-type="getUserInfo" type='primary' bindgetuserinfo="userHander" class='userLogin'>登 陆</button>
       </view>
+
     </view> 
 
   <view class='lookback' bindtap='goRecordUser'>
@@ -15,7 +28,7 @@
     <image src="/assets/image/more.png"></image>
   </view>
 
-  <view class='lookback'>
+  <view class='lookback' bindtap='goCollection'>
     <text>我的收藏</text>
     <image src="/assets/image/more.png"></image>
   </view>
@@ -31,7 +44,7 @@
   </view>
 </view>
 
-<view class='userInxi' wx:if="{{!isShouquan}}">
+<!-- <view class='userInxi' wx:if="{{!isShouquan}}">
   <view class='text'>请授权获取你的微信头像和微信名称</view>
   <button open-type="getUserInfo" type='primary' bindgetuserinfo="userHander">允许获取我的头像和名称</button>
-  </view>
+  </view> -->

@@ -50,3 +50,11 @@
   margin-top: 80rpx;
   border-radius: 4px;
 }
+
+
+.bofangJl {
+  font-size: 30rex;
+  color: #ccc;
+  text-align: center;
+  padding-top: 40rpx;
+}

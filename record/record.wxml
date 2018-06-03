@@ -1,7 +1,11 @@
 <!--record/record.wxml-->
 <!-- this is 播放记录 page  -->
-<view class='delete'>
+<view class='delete' wx:if="{{list.length > 0}}">
     <text class='text' bindtap='deleteHander'>删除记录</text>
+</view>
+
+<view class='bofangJl' wx:if="{{list.length === 0}}">
+暂无播放记录
 </view>
 
 <view class='movies-info'>

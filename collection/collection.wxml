@@ -1,0 +1,4 @@
+<!--collection/collection.wxml-->
+<view class='tip'>
+    暂无收藏 (●'◡'●)
+</view>

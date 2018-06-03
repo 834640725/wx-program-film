@@ -17,7 +17,12 @@ Page({
     
   },
 
-  // 确认授权登陆
+  /**
+   * 用户授权登陆
+   * button 按钮 
+   * open-type="getUserInfo" type='primary' bindgetuserinfo="userHander"
+   * userHander 侦听后，用wx.getUserInfo 获取用户信息
+   */
   userHander(){
     wx.getUserInfo({
       lang: "zh_CN ",  //用户信息语言
@@ -26,10 +31,10 @@ Page({
           userData: data.userInfo,
           isShouquan:true,
         })
-        
       })
     })
   },
+  
 
   onShow(){
   // 观看记录
@@ -46,7 +51,19 @@ Page({
 
   //前往播放记录
   goRecordUser(){
-    let n = JSON.stringify(this.data.moviesList);
+
+  /**
+   * 如果当前用户为登陆状态，则将播放记录的数据传递过去。
+   * 如果用户没有登陆，则传递空数据。
+   */
+
+    let n;
+    if (this.data.isShouquan){
+       n = JSON.stringify(this.data.moviesList);
+    }else{
+      n = '';
+    }
+
     wx.navigateTo({
       url: `/record/record?j=${n}`,
     })
@@ -59,4 +76,11 @@ Page({
       moviesList:[],
     })
   },
+
+  // 进入收藏
+  goCollection(){
+    wx.navigateTo({
+      url: '/collection/collection',
+    })
+  }
 })
