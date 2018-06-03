@@ -1,0 +1,22 @@
+<!--setting/setting.wxml-->
+<view class='cont'>
+  <view class='setting'>
+    <text>用户反馈</text>
+    <image src='/assets/image/more.png'></image>
+  </view>
+
+  <view class='setting cancel' bindtap='dropOut'>
+    <text class='{{isLogin ? "active" : ""}}'>退出登陆</text>
+  </view>
+</view>
+
+<view class='queren' wx:if="{{false}}">
+  <view class='message'>
+      <view class='title'>是否退出登陆</view>
+      <view class='tips'>退出后直接返回用户界面</view>
+      <view class='iscancel'>
+        <view class='cancel'>取消</view>
+        <view class='yes'>确认</view>
+      </view>
+  </view>
+</view>

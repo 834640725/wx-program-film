@@ -14,8 +14,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+      
   },
+
 
   /**
    * 用户授权登陆
@@ -23,20 +24,55 @@ Page({
    * open-type="getUserInfo" type='primary' bindgetuserinfo="userHander"
    * userHander 侦听后，用wx.getUserInfo 获取用户信息
    */
-  userHander(){
-    wx.getUserInfo({
-      lang: "zh_CN ",  //用户信息语言
-      success: ((data) => {
-        this.setData({
-          userData: data.userInfo,
-          isShouquan:true,
+  userTrue(){
+      wx.getUserInfo({
+        lang: "zh_CN ",  //用户信息语言
+        success: ((data) => {
+          this.setData({
+            userData: data.userInfo,
+            isShouquan: true,
+          })
         })
       })
-    })
+
+      // 缓存登陆状态
+      wx.setStorage({
+        key: 'login',
+        data: true,
+      })
+  },
+
+  /**
+   * 用户授权登陆
+   */
+  userHander(){
+    this.userTrue()
   },
   
 
   onShow(){
+    wx.getStorage({
+      key: 'login',
+      success: (({data}) => {
+        /**
+         * 每次进入前台，从缓存中取出用户是否登陆。
+         * 如果已经登陆
+         */
+        if(data){
+          this.userTrue();
+        }else{
+          wx.setStorage({
+            key: 'login',
+            data: false,
+          })
+        }
+
+         this.setData({
+           isShouquan:data,
+         })
+      })
+    })
+
   // 观看记录
     // Get into this page and pick up the cached data
     wx.getStorage({
@@ -61,7 +97,7 @@ Page({
     if (this.data.isShouquan){
        n = JSON.stringify(this.data.moviesList);
     }else{
-      n = '';
+      n = '[]';
     }
 
     wx.navigateTo({
@@ -81,6 +117,13 @@ Page({
   goCollection(){
     wx.navigateTo({
       url: '/collection/collection',
+    })
+  },
+
+  // setTing
+  goSetting(){
+    wx.navigateTo({
+      url: '/setting/setting',
     })
   }
 })
