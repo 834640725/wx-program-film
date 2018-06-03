@@ -27,7 +27,9 @@ Page({
           movieData:data,
         })
 
-        let {title, id} = data;
+        let imagepic = data.images.large;
+
+        let { title, id} = data;
         let arr = [];
 
         // 先从缓存中取出数据
@@ -40,7 +42,7 @@ Page({
 
         //存入播放的那个数据
 
-        let obj = {title,id}
+        let obj = { title, id, imagepic}
 
         let isHas = arr.some(el => el.id === obj.id);
 

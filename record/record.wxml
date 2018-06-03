@@ -1,0 +1,21 @@
+<!--record/record.wxml-->
+<!-- this is 播放记录 page  -->
+<view class='delete'>
+    <text class='text' bindtap='deleteHander'>删除记录</text>
+</view>
+
+<view class='movies-info'>
+    <scroll-view>
+
+    <view class='movies' wx:for="{{list}}" wx:key="{{index}}">
+      <image src='{{item.imagepic}}'></image>
+      
+      <view class='title'>
+        <text>{{item.title}}</text>
+
+        <view class='goWatch' data-id="{{item.id}}" bindtap='yugao'>继续观看</view>
+      </view>
+    </view>
+
+    </scroll-view>
+</view>

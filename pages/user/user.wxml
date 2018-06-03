@@ -10,7 +10,7 @@
       </view>
     </view> 
 
-  <view class='lookback'>
+  <view class='lookback' bindtap='goRecordUser'>
     <text>播放记录</text>
     <image src="/assets/image/more.png"></image>
   </view>

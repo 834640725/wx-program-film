@@ -1,0 +1,52 @@
+/* record/record.wxss */
+
+.delete {
+  width: 100%;
+  height: 80rpx;
+  background: #fafafa;
+  text-align: right;
+}
+
+.delete .text {
+  line-height: 80rpx;
+  color: #e50e20;
+  font-size: 26rpx;
+  font-weight: 700;
+  margin-right: 22rpx;
+}
+
+
+.movies {
+  height: 224rpx;
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  margin: 32rpx 0;
+}
+.movies image {
+  width: 200rpx;
+  height: 100%;
+  display: inline-block;
+}
+
+.movies .title {
+  display: inline-block;
+  height: 224rpx;
+  margin-left: 30rpx;
+  vertical-align: top;
+  font-size: 32rpx;
+  font-weight: 700;
+  margin-top: 7rpx;
+}
+
+.movies .goWatch {
+  font-weight: 300;
+  width: 160rpx;
+  height: 60rpx;
+  background: #f60;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+  margin-top: 80rpx;
+  border-radius: 4px;
+}

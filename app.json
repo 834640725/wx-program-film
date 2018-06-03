@@ -5,7 +5,8 @@
     "pages/subject/subject",
     "pages/yugao/yugao",
     "pages/movieInfo/movieInfo",
-    "subject-movies-types/subject-movies-types"
+    "subject-movies-types/subject-movies-types",
+    "record/record"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
@@ -30,7 +31,7 @@
       },
       {
         "pagePath": "pages/user/user",
-        "text": "用户",
+        "text": "我的",
         "iconPath": "/assets/image/user.png",
         "selectedIconPath": "/assets/image/user-active.png"
       }
