@@ -7,25 +7,32 @@ Page({
   data: {
     userData:{},
     moviesList:[],  //观看记录
+    isShouquan:false,  //用户授权获取信息
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
+  },
+
+  // 确认授权登陆
+  userHander(){
     wx.getUserInfo({
-      lang:"zh_CN ",  //用户信息语言
-      success:((data) => {
+      lang: "zh_CN ",  //用户信息语言
+      success: ((data) => {
         this.setData({
           userData: data.userInfo,
+          isShouquan:true,
         })
-
+        
       })
     })
   },
 
   onShow(){
-
+  // 观看记录
     // Get into this page and pick up the cached data
     wx.getStorage({
       key: 'looklist',
@@ -51,5 +58,5 @@ Page({
     this.setData({
       moviesList:[],
     })
-  }
+  },
 })

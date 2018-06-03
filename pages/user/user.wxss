@@ -4,6 +4,7 @@
   height: 100%;
   background: #fafafa;
   padding-top: 20rpx;
+  position: relative;
 }
 
 /* 头像信息 */
@@ -60,4 +61,25 @@
   position: absolute;
   right:20rpx;
   top: 36rpx;
+}
+
+.userInxi {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.userInxi .text {
+  margin-top: 40rpx;
+  line-height: 40rpx;
+  padding: 16rpx;
+}
+
+.userInxi button {
+  font-size: 28rpx;
+  margin-top: 40rpx;
 }
