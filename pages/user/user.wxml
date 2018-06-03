@@ -1,20 +1,33 @@
 <!--pages/user/user.wxml-->
 <view class='userinfo'>
-    <view class='headpic'>
+     <view class='headpic'>
       <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI1VrPs7GTnFXYkR1CSicQ7icxHpVibe8bENBky1o9vso2VlNk0bfQuv0iag0QH7rL1vTrkQH43jGHH6g/132"></image>
-    </view>
 
-    <view class='username'>
-      <text>{{userData.nickName}}</text>
-    </view>
+      <view class='username'>
+        <text>洋</text>
+        <text class='vip'>Vip10</text>
+        <image src='/assets/image/vip.png'></image>
+      </view>
+    </view> 
 
-    <view class='where'>
-       所在国家:{{userData.country}}
-    </view>
-    <view class='where'>
-       所在省份:{{userData.province}} 
-    </view>
-    <view class='where'>
-      所在城市：{{userData.city}}
-    </view>
+  <view class='lookback'>
+    <text>播放记录</text>
+    <image src="/assets/image/more.png"></image>
+  </view>
+
+  <view class='lookback'>
+    <text>我的收藏</text>
+    <image src="/assets/image/more.png"></image>
+  </view>
+
+  <view class='lookback'>
+    <text>设置</text>
+    <image src="/assets/image/more.png"></image>
+  </view>
+
+   <view class='lookback'>
+    <text>个人资料</text>
+    <image src="/assets/image/more.png"></image>
+  </view>
+
 </view>

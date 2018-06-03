@@ -32,8 +32,8 @@ Page({
 
         // 先从缓存中取出数据
         let n = wx.getStorageSync('looklist')
-        console.log(111111111111111,n)
-
+       
+       
         //扩展到数组arr上
         arr = [...arr,...n]
 
@@ -58,7 +58,7 @@ Page({
           key: 'looklist',
           data: this.data.lookArr,
         })
-        
+
 
       })
     })
