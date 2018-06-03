@@ -6,12 +6,15 @@ Page({
    */
   data: {
      movieData:{},
+     lookArr:[],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+
     let id = options.id;
     wx.request({
       url: 'https://douban.uieee.com/v2/movie/subject/' + id,
@@ -23,7 +26,40 @@ Page({
         this.setData({
           movieData:data,
         })
-        console.log(this.data.movieData)
+
+        let {title, id} = data;
+        let arr = [];
+
+        // 先从缓存中取出数据
+        let n = wx.getStorageSync('looklist')
+        console.log(111111111111111,n)
+
+        //扩展到数组arr上
+        arr = [...arr,...n]
+
+
+        //存入播放的那个数据
+
+        let obj = {title,id}
+
+        let isHas = arr.some(el => el.id === obj.id);
+
+        if(!isHas){
+          arr.push(obj)
+        }
+        
+        this.setData({
+          lookArr:arr,
+        })
+
+        
+        //做缓存
+        wx.setStorage({
+          key: 'looklist',
+          data: this.data.lookArr,
+        })
+        
+
       })
     })
   },
@@ -32,7 +68,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**

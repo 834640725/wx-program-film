@@ -35,7 +35,7 @@ Page({
           //数据回来之后隐藏加载动画
           wx.hideNavigationBarLoading();
           //请求成功同步数据
-          console.log(this.data.moviesData)
+          // console.log(this.data.moviesData)
        })
      })
   },
