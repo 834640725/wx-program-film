@@ -31,6 +31,9 @@
  
 ## 项目截图
 
+##### 正在热映(首页)
+![正在热映](https://github.com/qiqingfu/wx-program-film/blob/master/assets/img/1_%E6%AD%A3%E5%9C%A8%E7%83%AD%E6%98%A0.jpg)
+
 
 
 
