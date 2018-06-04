@@ -5,6 +5,7 @@
   background: #fafafa;
   padding-top: 20rpx;
   position: relative;
+  z-index: 10;
 }
 
 /* 头像信息 */
@@ -80,3 +81,5 @@
 .aqititle {
   margin-bottom: 20rpx;
 }
+
+@import '/component/style/message.wxss'

@@ -18,7 +18,7 @@
       <view  wx:if="{{!isShouquan}}">
       <image src="/assets/image/header.png" class='noTitle'></image>
 
-      <button open-type="getUserInfo" type='primary' bindgetuserinfo="userHander" class='userLogin'>登 陆</button>
+      <button open-type="getUserInfo" type='primary' bindgetuserinfo="showMessage" class='userLogin'>登 陆</button>
       </view>
 
     </view> 
@@ -44,7 +44,6 @@
   </view>
 </view>
 
-<!-- <view class='userInxi' wx:if="{{!isShouquan}}">
-  <view class='text'>请授权获取你的微信头像和微信名称</view>
-  <button open-type="getUserInfo" type='primary' bindgetuserinfo="userHander">允许获取我的头像和名称</button>
-  </view> -->
+<import src="/component/moves-type/message.wxml"/>
+<template is="message" data="{{title,state}}"></template>
+

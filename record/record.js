@@ -32,7 +32,10 @@ Page({
 
   // 删除播放记录
   deleteHander(){
-    wx.clearStorage();
+    wx.setStorage({
+      key: 'looklist',
+      data: [],
+    })
     this.setData({
       list:[],
     })

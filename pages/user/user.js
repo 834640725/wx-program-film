@@ -8,6 +8,8 @@ Page({
     userData:{},
     moviesList:[],  //观看记录
     isShouquan:false,  //用户授权获取信息
+    title:"请授权获取您的个人信息",
+    state:false,
   },
 
   /**
@@ -23,14 +25,16 @@ Page({
    * button 按钮 
    * open-type="getUserInfo" type='primary' bindgetuserinfo="userHander"
    * userHander 侦听后，用wx.getUserInfo 获取用户信息
+   * confirm
    */
-  userTrue(){
+  confirm(){
       wx.getUserInfo({
         lang: "zh_CN ",  //用户信息语言
         success: ((data) => {
           this.setData({
             userData: data.userInfo,
             isShouquan: true,
+            state:false,
           })
         })
       })
@@ -46,7 +50,7 @@ Page({
    * 用户授权登陆
    */
   userHander(){
-    this.userTrue()
+    this.confirm()
   },
   
 
@@ -59,7 +63,7 @@ Page({
          * 如果已经登陆
          */
         if(data){
-          this.userTrue();
+          this.confirm();
         }else{
           wx.setStorage({
             key: 'login',
@@ -110,6 +114,7 @@ Page({
   onHide(){
     this.setData({
       moviesList:[],
+      state:false,  //如果正在授权登陆中切换,授权失败。
     })
   },
 
@@ -125,5 +130,21 @@ Page({
     wx.navigateTo({
       url: '/setting/setting',
     })
-  }
+  },
+
+  // 显示确认弹窗
+  showMessage(){
+    this.setData({
+       state:true,
+    })
+  },
+
+  // 取消授权
+  bindHander(){
+    this.setData({
+      state:false,
+    })
+  },
+
+
 })
