@@ -34,6 +34,27 @@
 ##### 正在热映(首页)
 ![正在热映](https://github.com/qiqingfu/wx-program-film/blob/master/assets/img/1_%E6%AD%A3%E5%9C%A8%E7%83%AD%E6%98%A0.jpg)
 
+##### 电影详情
+![电影详情](https://github.com/qiqingfu/wx-program-film/blob/master/assets/img/2_%E7%94%B5%E5%BD%B1%E8%AF%A6%E6%83%85.jpg)
+
+##### 预告片
+![预告片](https://github.com/qiqingfu/wx-program-film/blob/master/assets/img/3_%E9%A2%84%E5%91%8A%E7%89%87%E6%92%AD%E6%94%BE.jpg)
+
+##### 电影分类
+![电影分类](https://github.com/qiqingfu/wx-program-film/blob/master/assets/img/4_%E7%94%B5%E5%BD%B1%E5%88%86%E7%B1%BB.jpg)
+
+##### 用户登陆
+![用户登陆](https://github.com/qiqingfu/wx-program-film/blob/master/assets/img/5_%E7%94%A8%E6%88%B7%E7%99%BB%E9%99%86.jpg)
+
+##### 授权验证
+![授权验证](https://github.com/qiqingfu/wx-program-film/blob/master/assets/img/6_%E7%94%A8%E6%88%B7%E6%8E%88%E6%9D%83.jpg)
+
+##### 播放记录
+![播放记录](https://github.com/qiqingfu/wx-program-film/blob/master/assets/img/7_%E6%92%AD%E6%94%BE%E8%AE%B0%E5%BD%95.jpg)
+
+##### 设置
+![设置](https://github.com/qiqingfu/wx-program-film/blob/master/assets/img/8_%E8%AE%BE%E7%BD%AE.jpg)
+
 
 
 
