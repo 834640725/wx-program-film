@@ -147,4 +147,20 @@ Page({
   },
 
 
+  // 用户个人资料
+  userHander(){
+    // this.data.isShouquan
+    let data;
+    if (this.data.isShouquan){
+      data = JSON.stringify(this.data.userData);
+    }else{
+      data=JSON.stringify({});
+    }
+
+    wx.navigateTo({
+      url: `/user-data/user-data?data=${data}`
+    })
+    
+  }
+
 })

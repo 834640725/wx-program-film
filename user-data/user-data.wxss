@@ -1,0 +1,26 @@
+/* user-data/user-data.wxss */
+.userinfo {
+  text-align: center;
+  padding-top: 200rpx;
+}
+
+.userinfo view {
+  line-height: 60rpx;
+  color: #878787;
+  font-size: 30rpx;
+}
+
+.tip {
+  color: #878787;
+  font-size: 40rpx;
+}
+
+.name {
+  color: #f60;
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.title {
+  margin-bottom: 40rpx;
+}

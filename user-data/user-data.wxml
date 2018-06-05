@@ -1,0 +1,10 @@
+<!--user-data/user-data.wxml-->
+<view class='userinfo' wx:if="{{userData.nickName}}">
+   <view class='title'><text class='name'>{{userData.nickName}}</text> 的个人信息</view>
+   <view>国家:{{userData.country}}</view>
+   <view>省份:{{userData.province}}</view>
+   <view>城市:{{userData.city}}</view>
+</view>
+<view class='userinfo' wx:if="{{!userData.nickName}}">
+ <text class='tip'>请你先登陆</text>
+</view>
